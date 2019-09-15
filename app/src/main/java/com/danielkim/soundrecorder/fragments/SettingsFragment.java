@@ -21,15 +21,6 @@ public class SettingsFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
-        CheckBoxPreference highQualityPref = (CheckBoxPreference) findPreference(getResources().getString(R.string.pref_high_quality_key));
-        highQualityPref.setChecked(MySharedPreferences.getPrefHighQuality(getActivity()));
-        highQualityPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                MySharedPreferences.setPrefHighQuality(getActivity(), (boolean) newValue);
-                return true;
-            }
-        });
 
         Preference aboutPref = findPreference(getString(R.string.pref_about_key));
         aboutPref.setSummary(getString(R.string.pref_about_desc, BuildConfig.VERSION_NAME));
