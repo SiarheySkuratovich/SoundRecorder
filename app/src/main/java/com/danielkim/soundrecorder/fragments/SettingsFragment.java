@@ -7,7 +7,6 @@ import android.preference.PreferenceFragment;
 import android.support.annotation.Nullable;
 
 import com.danielkim.soundrecorder.BuildConfig;
-import com.danielkim.soundrecorder.MySharedPreferences;
 import com.danielkim.soundrecorder.R;
 import com.danielkim.soundrecorder.activities.SettingsActivity;
 
